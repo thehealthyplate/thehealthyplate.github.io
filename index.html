@@ -1,1 +1,657 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>CricBrawl - USA's Premier Fantasy Cricket App</title>
+  <meta name="description"
+    content="Experience the excitement of fantasy cricket like never before with CricBrawl! As the top destination for cricket enthusiasts in the USA, CricBrawl offers a thrilling gaming experience that combines strategy, skill, and competition. Build your dream team, manage players, and compete in real-time matches against friends and rivals nationwide. With immersive gameplay, real-time scoring, and exciting rewards, CricBrawl takes fantasy cricket to the next level. Join the action now and prove your skills on the virtual pitch with CricBrawl! Visit cricbrawl.com for more details!">
+  <meta name="keywords"
+    content="Cricket in America, Fantasy Cricket App USA, Cricket Fantasy App Download USA, USA Cricket, Best Fantasy Cricket App USA, Mobile Fantasy Cricket USA, Fantasy Cricket USS, Play Fantasy Cricket USA, Real Cash Fantasy Cricket USA, USA Fantasy Cricket Leagues">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <script src="https://kit.fontawesome.com/7aa4814fd6.js" crossorigin="anonymous"></script>
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    emailjs.init('QukYp0RtiY2XF_HSk')
+  </script>
+  <script>
+    function sendEmail() {
+      event.preventDefault()
+      const messageForm = document.querySelector(".contact_form");
+      const messageOk = document.querySelector(".message-ok");
+
+      const serviceID = "service_lyd61c8";
+      const templateID = "template_v9h6qxp";
+      const form = document.getElementById("contact_form");
+
+      emailjs.sendForm(serviceID, templateID, form)
+        .then(() => {
+          messageForm.classList.add("invisible");
+          messageOk.classList.remove("invisible");
+        }, (err) => {
+          console.error(`Error Sending message ${JSON.stringify(err)}`);
+        });
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <script type="application/ld+json" id="Corporation Schema">
+      {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "CricBrawl",
+        "alternateName": "Cricket Fantasy app for USA",
+        "url": "https://cricbrawl.com",
+        "logo": "https://www.cricbrawl.com/images/logo-dark.svg",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61557898962679",
+          "https://twitter.com/cricbrawl/",
+          "https://www.instagram.com/cricbrawl/",
+          "https://www.youtube.com/@cricbrawl",
+          "https://www.linkedin.com/company/cricbrawl"
+        ]
+      }
+      </script>
+  <script type="application/ld+json" id="JsonLDFAQ">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What is Fantasy Cricket?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Get acquainted with the concept of Fantasy Cricket, a virtual game where participants create their
+                      dream team of real cricket players from different teams. Points are awarded based on the players'
+                      performance in actual matches, offering an immersive and engaging experience."
+          }
+        },{
+          "@type": "Question",
+          "name": "Is CricBrawl Legal in US and Canada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Learn about the legal aspects of CricBrawl in the US and Canada, ensuring clarity on the regulations
+                      governing recreational cricket played in local neighborhoods and communities."
+          }
+        },{
+          "@type": "Question",
+          "name": "Is It Secure? Is My Wallet and Data Safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Discover our commitment to security and data privacy, ensuring the safety of your wallet and personal
+                      information. Our platform employs robust encryption protocols and stringent security measures to
+                      safeguard your data against unauthorized access and cyber threats."
+          }
+        },{
+          "@type": "Question",
+          "name": "How Are Fantasy Points Counted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gain insight into the scoring system used in Fantasy Cricket, understanding how points are calculated
+                      based on players' performances such as runs scored, wickets taken, catches, and more. Stay informed to
+                      strategize effectively and maximize your team's performance."
+          }
+        },{
+          "@type": "Question",
+          "name": "Is There Tax Implication If I Win?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Explore the tax implications associated with winning in Fantasy Cricket contests, providing clarity
+                      on any potential tax obligations based on your jurisdiction and the amount of your winnings."
+          }
+        },{
+          "@type": "Question",
+          "name": "What States Are Allowed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the eligibility criteria regarding participating states, ensuring compliance with applicable
+                      regulations and restrictions. Get clarity on which states permit Fantasy Cricket participation and
+                      access our platform for an unparalleled gaming experience."
+          }
+        }]
+      }
+      </script>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img src="images/logo-dark.svg" width="120"
+          height="60" alt="logo" class="logo-1"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="fas fa-bars"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#about" data-scroll-nav="1">About</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#features" data-scroll-nav="2">Features</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#faq" data-scroll-nav="5">Faq</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#contact" data-scroll-nav="6">Join US</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <!-------Banner Start------->
+  <section class="banner" data-scroll-index='0'>
+    <div class="banner-overlay">
+      <div class="container">
+        <div class="row" style="margin-bottom: 60px;">
+          <div class="col-md-8 col-sm-12">
+            <div class="banner-text">
+              <h2 class="white">Discover the Excitement of Fantasy Cricket with CricBrawl!</h2>
+              <h6 class="white">Empowering Cricket Fans Across the USA</h6>
+              <p class="banner-text white">Unlock your cricketing prowess with CricBrawl, the premier fantasy cricket
+                platform. Join now to assemble your dream
+                team, challenge friends, and vie for thrilling prizes. With live updates and immersive gameplay,
+                CricBrawl delivers an
+                unmatched cricketing adventure for fans nationwide.</p>
+              <ul>
+                <li><a><img height="40px" src="images/appstore.svg" class="wow fadeInUp" data-wow-delay="0.4s" /></a>
+                </li>
+                <li><a><img src="images/playstore.svg" class="wow fadeInUp" data-wow-delay="0.7s" /></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="mx-auto image-container">
+              <div class="carousel">
+                <img src="images/init-2.png" />
+                <img src="images/init-3.png" />
+                <img src="images/init-4.png" />
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-4 col-sm-12"> <img src="images/iphone-screen.svg" class="img-fluid wow fadeInUp" /> </div> -->
+        </div>
+      </div>
+    </div>
+    <span class="svg-wave"> <img class="svg-hero" src="images/cricbrawl-wave.svg"> </span>
+  </section>
+
+  <!-------Banner End------->
+
+  <!-------About Start------->
+
+  <section id="about" class="about section-padding prelative" data-scroll-index='1'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>About</h3>
+            <span class="line"></span>
+            <p>Welcome to CricBrawl - your ultimate cricket fantasy destination. Built for cricket fans across the USA,
+              CricBrawl offers an exhilarating platform where you can craft winning strategies, compete against friends,
+              and triumph in the arena of cricket battles.</p>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <i class="fa fa-life-ring"
+                    aria-hidden="true"></i>
+                  <h5>User-Friendly Interface</h5>
+                  <p>Navigate our platform effortlessly with our intuitive user interface. Designed with simplicity in
+                    mind, our interface ensures a smooth and enjoyable gaming experience for all users.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fa fa-mobile"
+                    aria-hidden="true"></i>
+                  <h5>iOS and Android Support</h5>
+                  <p>Enjoy the ultimate cricket fantasy experience on the go! CricBrawl is compatible with both iOS and
+                    Android devices, allowing you to access your favorite fantasy cricket platform anytime, anywhere.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fa fa-bolt" aria-hidden="true"></i>
+                  <h5>Real-Time Excitement</h5>
+                  <p>Immerse yourself in the excitement of real-time updates. From live scores to instant fantasy point
+                    updates, CricBrawl delivers the pulse-pounding action of cricket straight to your fingertips.</p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="about-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------About End------->
+
+  <!-------Video Start------->
+  <section id="video" class="video-section prelative text-center white">
+    <div class="section-padding video-overlay">
+      <div class="container">
+        <h3>How To Play</h3>
+        <i class="fa fa-play" style="display: inline-block; opacity: 0.5;" id="video-icon" aria-hidden="true"></i>
+        <div class="video-popup">
+          <div class="video-src">
+            <div class="iframe-src">
+              <!-- ADD link of onboarding video -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------Video End------->
+
+  <!-------Features Start------->
+  <section id="features" class="feature section-padding" data-scroll-index='2'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>Features</h3>
+            <span class="line"></span>
+            <p>Elevate your cricket fantasy experience with our comprehensive platform, featuring seamless financial
+              transactions alongside diverse gameplay options, strategic team-building opportunities, live score
+              updates, and thrilling tournament competitions</p>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="media-body text-right media-right-margin">
+                    <h5>Join the Thrilling Arena</h5>
+                    <p>Engage in the excitement of competitive cricket battles by joining our public pools. Test your
+                      skills against a diverse array of opponents for a chance to claim victory and earn rewards</p>
+                  </div>
+                  <div class="media-right icon-border"> <span class="fa fa-bolt" aria-hidden="true"></span> </div>
+                </div>
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                  <div class="media-body text-right media-right-margin">
+                    <h5>Challenge Your Inner Circle</h5>
+                    <p>Enjoy exclusive cricket battles with your friends in private matches. Set your own rules, create
+                      custom challenges, and compete in a friendly yet fiercely competitive environment</p>
+                  </div>
+                  <div class="media-right icon-border"> <span class="fa fa-battery-full" aria-hidden="true"></span>
+                  </div>
+                </div>
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
+                  <div class="media-body text-right media-right-margin">
+                    <h5>Forge Your Winning Team</h5>
+                    <p>Strategize and assemble your dream squad from a vast selection of cricket stars. Choose players
+                      wisely based on their strengths, stats, and performance to create an unbeatable lineup</p>
+                  </div>
+                  <div class="media-right icon-border"> <span class="fa fa-wifi" aria-hidden="true"></span> </div>
+                </div>
+              </div>
+              <!-- Feature Image Slider-->
+              <div class="col-md-6 d-flex">
+                <div class="mx-auto feat-image-container">
+                  <div class="feat-carousel">
+                    <img src="images/feat-1.png" />
+                    <img src="images/feat-2.png" />
+                    <img src="images/feat-3.png" />
+                    <img src="images/feat-4.png" />
+                    <img src="images/feat-5.png" />
+                    <img src="images/feat-6.png" />
+                    <img src="images/feat-7.png" />
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-check-double"
+                      aria-hidden="true"></span> </div>
+                  <div class="media-body text-left">
+                    <h5>Stay Ahead of the Game</h5>
+                    <p>Keep track of every thrilling moment with live score updates. Whether you're in the midst of a
+                      battle or simply staying informed, our real-time scoring system ensures you're always in the know
+                    </p>
+                  </div>
+                </div>
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-hdd"
+                      aria-hidden="true"></span> </div>
+                  <div class="media-body text-left">
+                    <h5>Rise to Tournament Glory</h5>
+                    <p>Compete against the best in our adrenaline-fueled tournaments. Battle through intense rounds,
+                      showcase your skills on a grand stage, and strive to emerge as the ultimate champion</p>
+                  </div>
+                </div>
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
+                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-dollar-sign"
+                      aria-hidden="true"></span> </div>
+                  <div class="media-body text-left">
+                    <h5>Seamless Transactions</h5>
+                    <p>Enjoy seamless financial transactions with a variety of payment methods, ensuring convenient
+                      deposits and withdrawals. Our secure platform supports credit cards, debit cards, ACH transfers,
+                      and more, providing a hassle-free experience for managing your funds.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------Features End------->
+
+  <!-------FAQ Start------->
+  <section id="faq" class="faq section-padding prelative" data-scroll-index='5'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>Frequently Asked Questions</h3>
+            <span class="line"></span>
+            <p>Explore the most common questions about Fantasy Cricket, including its legality, security measures,
+              scoring system, tax implications, and eligibility criteria for participating states.</p>
+          </div>
+          <div class="section-content">
+            <div class="row">
+              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.2s">
+                <h4>What is Fantasy Cricket?</h4>
+                <p>Get acquainted with the concept of Fantasy Cricket, a virtual game where participants create their
+                  dream team of real cricket players from different teams. Points are awarded based on the players'
+                  performance in actual matches, offering an immersive and engaging experience.</p>
+              </div>
+              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.2s">
+                <h4>Is CricBrawl Legal in US and Canada?</h4>
+                <p>Learn about the legal aspects of CricBrawl in the US and Canada, ensuring clarity on the regulations
+                  governing recreational cricket played in local neighborhoods and communities.</p>
+              </div>
+              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.4s">
+                <h4>Is It Secure? Is My Wallet and Data Safe?</h4>
+                <p>Discover our commitment to security and data privacy, ensuring the safety of your wallet and personal
+                  information. Our platform employs robust encryption protocols and stringent security measures to
+                  safeguard your data against unauthorized access and cyber threats.</p>
+              </div>
+              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.4s">
+                <h4>How Are Fantasy Points Counted?</h4>
+                <p>Gain insight into the scoring system used in Fantasy Cricket, understanding how points are calculated
+                  based on players' performances such as runs scored, wickets taken, catches, and more. Stay informed to
+                  strategize effectively and maximize your team's performance.</p>
+              </div>
+              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
+                <h4>Is There Tax Implication If I Win?</h4>
+                <p>Explore the tax implications associated with winning in Fantasy Cricket contests, providing clarity
+                  on any potential tax obligations based on your jurisdiction and the amount of your winnings.</p>
+              </div>
+              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
+                <h4>What States Are Allowed?</h4>
+                <p>Check the eligibility criteria regarding participating states, ensuring compliance with applicable
+                  regulations and restrictions. Get clarity on which states permit Fantasy Cricket participation and
+                  access our platform for an unparalleled gaming experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------FAQ End------->
+
+  <!-------Contact Start------->
+  <section id="contact" class="contact section-padding" data-scroll-index='6'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>Join us</h3>
+            <span class="line"></span>
+            <p>CricBrawl is revolutionizing the world of fantasy cricket, and we invite you to join us on this thrilling
+              journey. Enter
+              your name and email to become a part of our exciting community. Stay updated as we prepare to launch our
+              first version
+              before the 2024 ICC Men's T20 World Cup.
+            </p>
+          </div>
+          <div class="section-content">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-8 ">
+                <form id="contact_form" class="contact_form" style="padding-top: 2rem;" action="">
+                  <div class="row">
+                    <div class="col">
+                      <input type="text" name="from_name" id="from_name" class="form-input w-100"
+                        placeholder="Full Name" required>
+                    </div>
+                    <div class="col">
+                      <input type="email" id="reply_to" class="form-input w-100" name="reply_to" placeholder="Email"
+                        required>
+                    </div>
+                  </div>
+                  <div class="field input">
+                    <input id="to_name" name="to_name" type="hidden" value="CricBrawl Team">
+                  </div>
+                  <input type="hidden" id="subject" class="form-input w-100" name="subject" placeholder="Subject">
+
+                  <button class="btn-grad w-100 text-uppercase" type="submit" name="button" onclick="sendEmail()">JOIN
+                    WaitList </button>
+                </form>
+                <div>
+                  <p class="message-ok invisible">You have joined our email list!</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="contact-info white">
+                  <div class="contact-item media"> <i class="fa fa-map-marker-alt media-left media-right-margin"></i>
+                    <div class="media-body">
+                      <p class="text-uppercase">CricBrawl</p>
+                      <p class="text-uppercase">Dallas, TX</p>
+                    </div>
+                  </div>
+                  <div class="contact-item media"> <i class="fa fa-envelope media-left media-right-margin"></i>
+                    <div class="media-body">
+                      <p class="text-uppercase">E-mail</p>
+                      <p class="text-uppercase"><a class="text-white"
+                          href="mailto:abcdefg@gmail.com">info@cricbrawl.com</a> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------Contact End------->
+
+  <!-------Download End------->
+  <section class="download section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center white">
+            <h3>Download Our App</h3>
+            <span class="line"></span>
+            <p class="white">Our app will be available in May! Get ready to enhance your cricket experience. Stay tuned
+              for the launch updates!</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="section-content text-center">
+            <ul>
+              <li><a href="#"><img height="40px" src="images/appstore.svg" class="wow fadeInUp"
+                    data-wow-delay="0.4s" /></a></li>
+              <li><a href="#"><img src="images/playstore.svg" class="wow fadeInUp" data-wow-delay="0.7s" /></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------Download End------->
+
+  <!----------Footer---------->
+  <footer id="footer" class="footer-copy">
+    <div class="container pt-5 ">
+      <div class="row border-bottom">
+        <div class="col-md-3 col-sm-12 mb-3 text-center">
+          <img src="images/logo-light.svg" width="200px" height="60px" class="img-fluid" alt="logo">
+
+        </div>
+        <div class="col-md-9 col-sm-12">
+
+          <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
+            <h6 class="mb-4 font-weight-bold text-uppercase">Learn more</h6>
+            <ul class="list-group">
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="pages/how-to-play.html">How To
+                  Play</a></li>
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="pages/fantasy-points.html">Fantasy
+                  Points</a></li>
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="pages/faq.html">FAQs</a></li>
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="pages/terms.html">Terms and
+                  Conditions</a></li>
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="pages/privacy.html">Privacy
+                  Policy</a></li>
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="pages/responsible.html">Responsible
+                  Play</a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+            <h6 class="mb-4 font-weight-bold text-uppercase">Connect</h6>
+            <ul class="list-group">
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                <a href="https://twitter.com/cricbrawl"><i class="fa fa-twitter mr-1"></i> Twitter</a>
+              </li class="list-group-item bg-transparent border-0 p-0 mb-2">
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                <a href="https://www.linkedin.com/company/cricbrawl" target="_blank"><i class="fa fa-linkedin mr-1"></i>
+                  LinkedIn</a>
+              </li>
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                <a href="https://www.instagram.com/cricbrawl/" target="_blank"><i class="fa fa-instagram mr-1"></i>
+                  Instagram</a>
+              </li>
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                <a href="https://www.youtube.com/@cricbrawl" target="_blank"><i class="fa fa-youtube mr-1"></i>
+                  YouTube</a>
+              </li>
+              <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                <a href="https://www.facebook.com/profile.php?id=61557898962679" target="_blank"><i
+                    class="fa fa-facebook mr-1"></i> Facebook</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>2024 &copy; CricBrawl. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <!-- scrollIt js -->
+  <script src="js/scrollIt.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    wow = new WOW();
+    wow.init();
+    $(document).ready(function (e) {
+
+      $('#video-icon').on('click', function (e) {
+        e.preventDefault();
+        $('.video-popup').css('display', 'flex');
+        $('.iframe-src').slideDown();
+      });
+      $('.video-popup').on('click', function (e) {
+        var $target = e.target.nodeName;
+        var video_src = $(this).find('iframe').attr('src');
+        if ($target != 'IFRAME') {
+          $('.video-popup').fadeOut();
+          $('.iframe-src').slideUp();
+          $('.video-popup iframe').attr('src', " ");
+          $('.video-popup iframe').attr('src', video_src);
+        }
+      });
+    });
+
+    $(window).on("scroll", function () {
+
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 50) {
+        $('.navbar-logo img').attr('src', 'images/logo-light.svg');
+        navbar.addClass("nav-scroll");
+
+      } else {
+        $('.navbar-logo img').attr('src', 'images/logo-dark.svg');
+        navbar.removeClass("nav-scroll");
+      }
+
+    });
+    $(window).on("load", function () {
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 50) {
+        $('.navbar-logo img').attr('src', 'images/logo-light.svg');
+        navbar.addClass("nav-scroll");
+      } else {
+        $('.navbar-logo img').attr('src', 'images/logo-dark.svg');
+        navbar.removeClass("nav-scroll");
+      }
+
+      $.scrollIt({
+
+        easing: 'swing',      // the easing function for animation
+        scrollTime: 900,       // how long (in ms) the animation takes
+        activeClass: 'active', // class given to the active nav element
+        onPageChange: null,    // function(pageIndex) that is called when page is changed
+        topOffset: -63
+      });
+    });
+
+  </script>
+
+  <!-- Image Slider -->
+
+  <script src="js/slider.js"></script>
+
+  <script>
+    const slider1 = new Slider(
+      ".image-container",
+      ".carousel",
+      2500
+    );
+    const slider2 = new Slider(
+      ".feat-image-container",
+      ".feat-carousel",
+      2500
+    );
+
+  </script>
+
+</body>
+
+</html>
