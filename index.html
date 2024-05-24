@@ -21,8 +21,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon.png">
   <link rel="manifest" href="images/favicon/site.webmanifest">
   <link rel="shortcut icon" href="images/favicon/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
@@ -132,7 +132,7 @@
       }
       </script>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg"> 
+  <nav class="navbar navbar-expand-lg nav-scroll"> 
     <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img src="images/thp-logo.png" width="60"
           height="60" alt="logo" class="logo-1"> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -472,6 +472,7 @@
 
       var bodyScroll = $(window).scrollTop(),
         navbar = $(".navbar");
+		navbar.addClass("nav-scroll");
 
       if (bodyScroll > 50) {
         $('.navbar-logo img').attr('src', 'images/thp-logo.png');
@@ -479,20 +480,19 @@
 
       } else {
         $('.navbar-logo img').attr('src', 'images/thp-logo.png');
-        navbar.removeClass("nav-scroll");
       }
 
     });
     $(window).on("load", function () {
       var bodyScroll = $(window).scrollTop(),
         navbar = $(".navbar");
+		navbar.addClass("nav-scroll");
 
       if (bodyScroll > 50) {
         $('.navbar-logo img').attr('src', 'images/thp-logo.png');
         navbar.addClass("nav-scroll");
       } else {
         $('.navbar-logo img').attr('src', 'images/thp-logo.png');
-        navbar.removeClass("nav-scroll");
       }
 
       $.scrollIt({
